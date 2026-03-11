@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <title>Yenepoya Libraries</title>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
         * {
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -73,60 +82,79 @@
         .catalog-btn:hover{
             background:#1d2e57;
         }
-        /* HERO SECTION */
 
-        .hero-section{
-            height:420px;
-            
-            background-size: cover;
-            background-position: center;
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #0d2247 40%, #1a3a6e 70%, #0f2a5a 100%);
+            padding: 50px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
             position: relative;
+            overflow: hidden;
         }
 
-/* Dark overlay */
-
-        .hero-overlay{
-            background: linear-gradient(120deg,#0e2a66 50%, rgba(0,0,0,0.3));
-            height:100%;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            padding:60px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(30, 80, 160, 0.3) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(10, 50, 120, 0.4) 0%, transparent 50%);
+            pointer-events: none;
         }
 
-/* Quote Box */
-        .hero-text{
-    width:60%;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-    padding:40px;
-    border-radius:20px;
-    color:white;
-    font-size:22px;
-    line-height:1.6;
+        .hero-container {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
         }
 
-        .hero-text h3{
-            margin-top:15px;
-            font-weight:bold;
+        .hero-text {
+            flex: 1;
         }
 
-/* Right Logo */
-
-        
-    .hero-logo{
-            width:40%;
-            display:flex;
-             justify-content:center;
+        .hero-text p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #dce8ff;
+            font-style: italic;
+            font-weight: 300;
+            margin: 0 0 20px 0;
+            letter-spacing: 0.3px;
+            border-left: 4px solid #4a90d9;
+            padding-left: 24px;
         }
 
-.hero-logo img{
-    width:420px;
-    height:280px;
-    object-fit:cover;
-    border-radius:8px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
+        .hero-text h3 {
+            color: #7ab3f0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding-left: 24px;
+            margin: 0;
+        }
+
+        .hero-logo {
+            flex: 0 0 auto;
+        }
+
+        .hero-logo img {
+            max-width: 420px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+
+
+
+
 
 
     </style>
@@ -178,27 +206,28 @@
 </div>
 
 </section>
-<section class="hero-section">
 
-<div class="hero-overlay">
 
-<div class="hero-text">
-<p>
-Libraries Store The Energy That Fuels The Imagination. They Open
-Up Windows To The World And Inspire Us To Explore And Achieve,
-And Contribute To Improving Our Quality Of Life.
-</p>
+    <main class="hero">
 
-<h3>- Sidney Sheldon</h3>
-</div>
+        <div class="hero-container">
 
-<div class="hero-logo">
-<img src="images/hero.jpeg" alt="Campus">
-</div>
+            <div class="hero-text">
+                <p>
+                    Libraries Store The Energy That Fuels The Imagination. They Open
+                    Up Windows To The World And Inspire Us To Explore And Achieve,
+                    And Contribute To Improving Our Quality Of Life.
+                </p>
+                <h3>— Sidney Sheldon</h3>
+            </div>
 
-</div>
+            <div class="hero-logo">
+                <img src="images/hero.jpeg" alt="Campus">
+            </div>
 
-</section>
+        </div>
+
+    </main>
 
 </body>
 </html>
