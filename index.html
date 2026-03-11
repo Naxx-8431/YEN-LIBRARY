@@ -3,9 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Yenepoya Libraries</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            display:flex;
+            justify-content:space-between;
+            padding:10px 60px;
+            align-items:center;
+        }
+
+        .logo1, .logo2 { 
+            max-height: 61px;
+        }
+
+        .navigation ul{
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .navigation ul li a{
+            text-decoration: none;
+        }
+        .search-section{
+            background:#f2f2f2;
+            padding:18px 40px;
+        }
+        .catalog-search{
+            display:flex;
+            align-items:center;
+            width:100%;
+            max-width:1300px;
+            margin:auto;
+            gap:10px;
+        }
+        .catalog-dropdown{
+            width:150px;
+            height:42px;
+            padding:5px 10px;
+            border:1px solid #d3d3d3;
+            border-radius:6px;
+            font-size:15px;
+            background:white;
+        }
+        .catalog-input{
+            flex:1;
+            height:42px;
+            border:1px solid #d3d3d3;
+            border-radius:6px;
+            padding:0 15px;
+            font-size:15px;
+        }
+
+        .catalog-btn{
+            width:70px;
+            height:42px;
+            background:#2e3f6b;
+            border:none;
+            border-radius:6px;
+            color:white;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        .catalog-btn:hover{
+            background:#1d2e57;
+        }
+        /* HERO SECTION */
+
+        .hero-section{
+            height:420px;
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+/* Dark overlay */
+
+        .hero-overlay{
+            background: linear-gradient(120deg,#0e2a66 50%, rgba(0,0,0,0.3));
+            height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:60px;
+        }
+
+/* Quote Box */
+        .hero-text{
+    width:60%;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+    padding:40px;
+    border-radius:20px;
+    color:white;
+    font-size:22px;
+    line-height:1.6;
+        }
+
+        .hero-text h3{
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+/* Right Logo */
+
+        
+    .hero-logo{
+            width:40%;
+            display:flex;
+             justify-content:center;
+        }
+
+.hero-logo img{
+    width:420px;
+    height:280px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <header>
+
+        <div class="logo">
+            <img src="https://library.yenepoya.edu.in/images/Central-Library-logo.png" alt="Library Logo" class="logo1">
+            <img src="https://library.yenepoya.edu.in/images/naac.png" alt="logo2" class="logo2">
+        </div>
+
+      <div class="header-left">
+        <nav class="navigation">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="eresources.html">E-Resources</a></li>
+            <li><a href="repository.html">Institutional Repository</a></li>
+            <li><a href="research.html">Research Support</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+      </div>
+        
+    </header>
+    <section class="search-section">
+
+<div class="catalog-search">
+
+<select class="catalog-dropdown">
+<option>Title</option>
+<option>Author</option>
+<option>Subject</option>
+<option>ISBN</option>
+<option>ISSN</option>
+<option>Series</option>
+<option>call number</option>
+
+</select>
+
+<input type="text" placeholder="Search Library Catalogue" class="catalog-input">
+
+<button class="catalog-btn">
+<i class="bi bi-search"></i>
+</button>
+
+</div>
+
+</section>
+<section class="hero-section">
+
+<div class="hero-overlay">
+
+<div class="hero-text">
+<p>
+Libraries Store The Energy That Fuels The Imagination. They Open
+Up Windows To The World And Inspire Us To Explore And Achieve,
+And Contribute To Improving Our Quality Of Life.
+</p>
+
+<h3>- Sidney Sheldon</h3>
+</div>
+
+<div class="hero-logo">
+<img src="images/hero.jpeg" alt="Campus">
+</div>
+
+</div>
+
+</section>
+
 </body>
 </html>
